@@ -51,10 +51,33 @@ def verificar_vizinho(ponto_referencia, lista_pontos, visitados):
     
     return pos_visitado
 
-# #teste para distancia
-# linhas = ler_arqTSP("rat99.tsp")
-# pontos = extrair_coordenadas(linhas)
 
-# distancia = calcular_distancia(int(pontos[0][1]),int(pontos[0][2]),int(pontos[1][1]),int(pontos[1][2]))
-# print(distancia)
-# #resultado = 14.212670, verificado e certa resposta
+def organizar_trajeto(lista_pontos):
+    visitados = [False] * len(lista_pontos)
+    caminho_final = []
+    pos_atual = 0
+
+    for i in range(len(lista_pontos)):
+        #ou seja, vamos começar no ponto 0, e cada cidade vizinha visitada, vai mudar de False para True
+        casa_atual = lista_pontos[pos_atual]
+        caminho_final.append(casa_atual)
+        visitados[pos_atual] = True
+
+        #print(visitados) #ver a lista sendo preenchida
+        #print()
+        prox_pos = verificar_vizinho(casa_atual, lista_pontos, visitados)
+        pos_atual = prox_pos
+    
+    return caminho_final
+
+
+linhas = ler_arqTSP("rat99.tsp")
+pontos = extrair_coordenadas(linhas)
+caminho_final = organizar_trajeto(pontos)
+print(caminho_final)
+
+#tendo a lista organizada, so falta pegar a distancia dos pontos entre cada um deles e somar
+#a ideia inicial até agora foi de simplesmente fazer com que a lista inical, resjustasse para os vizinho mais proximo, na ordem
+
+
+
