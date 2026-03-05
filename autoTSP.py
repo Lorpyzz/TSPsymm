@@ -51,7 +51,6 @@ def verificar_vizinho(ponto_referencia, lista_pontos, visitados):
     
     return pos_visitado
 
-
 def organizar_trajeto(lista_pontos):
     visitados = [False] * len(lista_pontos)
     caminho_final = []
@@ -70,14 +69,30 @@ def organizar_trajeto(lista_pontos):
     
     return caminho_final
 
+def calcular_distancia_total(caminho_final):
+    distancia_total = 0
+    for i in range(len(caminho_final)-1):
+        #como estamos lidando em diferença entre dois pontos, subtrai um, já que o último vai ser o ponto final, caso contrario, faria uma distancia com algo que está out of range
+        x1 = float(caminho_final[i][1])
+        y1 = float(caminho_final[i][2])
+        x2 = float(caminho_final[i+1][1])
+        y2 = float(caminho_final[i+1][2])
+        
+        distancia = calcular_distancia(x1,y1,x2,y2)
+        distancia_total += distancia
+    
+    return distancia_total
+
 
 linhas = ler_arqTSP("rat99.tsp")
 pontos = extrair_coordenadas(linhas)
 caminho_final = organizar_trajeto(pontos)
+distancia_total = calcular_distancia_total(caminho_final)
 print(caminho_final)
+print()
+print(f'A distancia total é: {distancia_total:.2f}')
 
-#tendo a lista organizada, so falta pegar a distancia dos pontos entre cada um deles e somar
-#a ideia inicial até agora foi de simplesmente fazer com que a lista inical, resjustasse para os vizinho mais proximo, na ordem
+
 
 
 
