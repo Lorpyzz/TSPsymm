@@ -81,6 +81,14 @@ def calcular_distancia_total(caminho_final):
         distancia = calcular_distancia(x1,y1,x2,y2)
         distancia_total += distancia
     
+    #depois de ver os testes vendo as listas do visitado, como a primeira casa estava sendo marcada como True(já que é o ponto de partida), a ultima casa não fechava o ciclo de volta para o primeiro
+    #isto é, necessitamos ainda somar a distancia entre o ultimo ponto da lista organizada e o primeiro ponto da lista
+    ultimo_x = float(caminho_final[-1][1])
+    ultimo_y = float(caminho_final[-1][2])
+    prim_x = float(caminho_final[0][2])
+    prim_y = float(caminho_final[0][2])
+    distancia_total += calcular_distancia(ultimo_x,ultimo_y,prim_x,prim_y)
+    
     return distancia_total
 
 
