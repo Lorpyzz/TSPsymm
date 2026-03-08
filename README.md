@@ -25,8 +25,8 @@ Esse código ele não printa o melhor resultado possível, na verdade, essa lóg
 Esse problema é completamente extenso, apesar de parecer simples, uma máquina não consegue chegar num resultado "perfeito" de forma rápida,
 na verdade, chega a ser impossível com os métodos e a tecnologia de hoje.
 Esse código, seguindo naquela lógica, pode ser quer aconteça saltos gigantescos de um ponto para o outro, já que nessa ideia, ele pode fazer pontos mais isolados, aumentando ainda mais a distância somada no final.
-Existem outras formas de código na qual aplicam algorítmos de otimização, como o 2-opt, na qual, pega o resultado 
-
+Existem outras formas de código na qual aplicam algorítmos de otimização, como o 2-opt, na qual, através do resultado, ele pega linhas que se cruzam entre diferente pontos, e invertem eles de posição, então, faz alguns testes para verificar se o caminho fica mais curto.
+Essa otimização é como "destrançar" uma emerado de fios, apenas usando técnica de matemática e lógica, mas ainda assim, fica distante do resultado perfeito.
 
 
 
