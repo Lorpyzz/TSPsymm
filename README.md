@@ -12,6 +12,13 @@ ele sempre vai para o ponto mais próximo, se repetindo até o final, durante o 
 então, quando chegar no ponto de origem, fechando o ciclo, o código acaba.
 
 ## Como rodar:
+O código não utiliza nenhuma biblioteca além do ".math", o qual já vêm nativo do python.
+Portanto, para rodar, é necessário colocar o código "autoTSP.py" dentro de uma mesma pasta com outro arquivo onde tem os pontos, o qual seria o "rat99.tsp"
+Feito isso, é necessário apenas debuggar num compilador, e o resultado será dado no terminal.
+
+## Resultado no terminal:
+
+
 
 
 
