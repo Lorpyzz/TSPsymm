@@ -19,6 +19,7 @@ Feito isso, é necessário apenas debuggar num compilador, e o resultado será d
 ## Resultado no terminal:
 Ele vai printar uma lista com os pontos, organizado em ordem seguindo a lógica citada anteriormente,
 além disso, ele vai printar uma distância final percorrida durante todo o trajeto.
+Print dado no terminal: "A distancia total é: 1566.40"
 
 ## Algumas limitações:
 Esse código ele não printa o melhor resultado possível, na verdade, essa lógica minimiza muito do trabalho que o computador faz para chegar num resultado mais satisfatório possível.
