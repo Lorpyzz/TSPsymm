@@ -5,6 +5,15 @@ O código, cujo nome é "autoTSP.py", é uma aproximação de uma "solução" do
 O problema consiste em passar por todos os pontos, fechando um ciclo voltando do ponto de origem, sem voltar pelas coordenadas passada antes, 
 tentando achar um caminho mais curto entre eles.
 
+## Primeiros pensamentos:
+Quando foi passado o problema, fiquei analizando como ela poderia ser solucionada, em primeira instância, já sabia que era algo extensivo,
+primeira coisa que eu pensei, foi de selecionar 3 caminhos mais curtos em cada ponto, e no final, analizar entre elas para ver qual seria menor,
+porém, pensei de forma matemática, e analisei que isso iria crescer de forma exponencial na base 3, resultando num número gigantesco, 
+logo notei que isso seria um problema gigantesco para o computador analisar cada caso e ainda verificar entre eles.
+Então, pesquisei sobre o problema, mas só foi fazer uma assimilação com um mapa aleatório com pontos definidos, que notei algo,
+podemos basicamente pegar o caminho mais curto entre os pontos vizinhos, assim como uma viagem de carro que queremos ir em várias cidades diferentes,
+e apliquei essa mesma lógica em python, seguindo com essa ideia ao longo dela.
+
 ## Sobre o código:
 Partes do código foi feita por Inteligência Artificial, especificamente o Gemini PRO,
 seu uso foi feito para verificar quais pontos já foram visitados, isto é, lista de ("visitados"), e sua aplicação no código para organização das casas,
